@@ -35247,10 +35247,10 @@ require("./DAO/items-storage");
         return {
             template:
                 '<div class="playlist-item clearfix">' +
-                    '<a ng-href="/item/{{item.id}}">' +
+                    '<a ng-href="item/{{item.id}}">' +
                         '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
                     '</a>' +
-                    '<a ng-href="/item/{{item.id}}" class="title">{{item.snippet.title}}</a>'+
+                    '<a ng-href="item/{{item.id}}" class="title">{{item.snippet.title}}</a>'+
                     '<span class="date">Published on {{item.snippet.publishedAt | date}}</span>'+
                     '<div class="el description" last-line-ellipsis content="item.snippet.description"></div>'+
                 '</div>',
