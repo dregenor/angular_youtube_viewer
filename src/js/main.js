@@ -13,10 +13,7 @@
                 })
                 .state('media', {
                     url: "/media/{itemId:string}",
-                    template: "<div item-full></div>",
-                    params:{
-                        itemId:null
-                    }
+                    template: "<div item-full></div>"
                 });
 
             $locationProvider

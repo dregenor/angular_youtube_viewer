@@ -35204,12 +35204,12 @@ require("./DAO/items-storage");
         return {
             template:
                 '<div class="playlist-item clearfix">' +
-                    '<a  ui-sref="media({ itemId: item.id })" >' +
-                        '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
-                    '</a>' +
                     '<a ui-sref="media({ itemId: item.id })" class="title">{{item.snippet.title}}</a>'+
                     '<span class="date">Published on {{item.snippet.publishedAt | date}}</span>'+
                     '<div class="el description" last-line-ellipsis content="item.snippet.description"></div>'+
+                    '<a  ui-sref="media({ itemId: item.id })" >' +
+                        '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
+                    '</a>' +
                 '</div>',
             scope:{
               'item':'=playlistItem'
@@ -35268,10 +35268,7 @@ require("./DAO/items-storage");
                 })
                 .state('media', {
                     url: "/media/{itemId:string}",
-                    template: "<div item-full></div>",
-                    params:{
-                        itemId:null
-                    }
+                    template: "<div item-full></div>"
                 });
 
             $locationProvider
