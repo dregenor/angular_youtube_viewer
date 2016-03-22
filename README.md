@@ -4,18 +4,21 @@
 
 need install dev dependencies
 
-
+```
    npm install .
-
+```
 
 ## build static files
 
+```
    npm run build
-   
+```   
 
 ## run test server
    
+```   
    npm run serve
+```   
    
 ## all ready
 
