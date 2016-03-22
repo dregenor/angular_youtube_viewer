@@ -1,7 +1,10 @@
 module.exports = {
     proxy: {},
     publicPaths: {
-        '/angular_youtube_viewer/dist': 'dist'
+        '/src': 'src',
+        '/dist': 'dist',
+        '/node_modules': 'node_modules',
+        '/angular_youtube_viewer/dist':'dist'
     },
     mockPath:'mock',
     app: 'index.html', // this can also be an express app

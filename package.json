@@ -20,11 +20,17 @@
   "homepage": "https://github.com/dregenor/angular_youtube_viewer#readme",
   "dependencies": {
     "angular": "^1.5.2",
-    "angular-ui-router": "^0.2.18"
+    "angular-ui-router": "^0.2.18",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
     "browserify": "^13.0.0",
-    "simple-dev-server": "git+https://git@github.com/dregenor/simple-dev-server.git"
+    "gulp-clean-css": "^2.0.3",
+    "gulp-compass": "^2.1.0",
+    "gulp-uglify": "^1.5.3",
+    "simple-dev-server": "git+https://git@github.com/dregenor/simple-dev-server.git",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
