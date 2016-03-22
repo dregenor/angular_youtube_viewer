@@ -48,7 +48,7 @@
         return {
             template:
             '<div class="item-full">' +
-                '<a href="playlist" class="back"><  Back to list of videos</a>'+
+                '<a ui-sref="playlist" class="back"><  Back to list of videos</a>'+
                 '<span class="title">{{item.snippet.title}}</span>'+
                 '<span class="date">Published on {{item.snippet.publishedAt | date}}</span>'+
                 '<div class="clearfix">' +
