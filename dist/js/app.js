@@ -35317,8 +35317,7 @@ require("./DAO/items-storage");
 
             $locationProvider
                 .html5Mode({
-                    enabled: true,
-                    requireBase: false
+                    enabled: true
                 });
 
             $sceDelegateProvider.resourceUrlWhitelist([
