@@ -48,8 +48,10 @@
         return {
             template:
                 '<div class="playlist-item clearfix">' +
-                    '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
-                    '<a ng-href="/item/{{item.snippet.resourceId.videoId}}" class="title">{{item.snippet.title}}</a>'+
+                    '<a ng-href="/item/{{item.id}}">' +
+                        '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
+                    '</a>' +
+                    '<a ng-href="/item/{{item.id}}" class="title">{{item.snippet.title}}</a>'+
                     '<span class="date">Published on {{item.snippet.publishedAt | date}}</span>'+
                     '<div class="el description" last-line-ellipsis content="item.snippet.description"></div>'+
                 '</div>',
@@ -57,8 +59,6 @@
               'item':'=playlistItem'
             },
             controller:['$scope',function($scope){
-                $scope.state = {};
-                //$scope.item = EXAMPLE;
                 $scope.getThumbnail = function(){
                     var dist = 999999; //max size
                     var foundKey = null;

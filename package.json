@@ -1,10 +1,12 @@
 {
   "name": "angular_youtube_viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "example for interview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -e ./src/js/app.bundle.js -o ./dist/js/app.js",
+    "serve": "simple-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
     "angular-ui-router": "^0.2.18"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "browserify": "^13.0.0",
+    "simple-dev-server": "git+https://git@github.com/dregenor/simple-dev-server.git"
   }
 }

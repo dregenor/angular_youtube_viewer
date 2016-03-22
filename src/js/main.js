@@ -1,9 +1,10 @@
 (function(w,angular){
+    console.log('app');
     var YTApp = angular.module('app',['ui.router']);
 
     YTApp.config([
-        '$stateProvider', '$urlRouterProvider','$locationProvider',
-        function($stateProvider, $urlRouterProvider,$locationProvider) {
+        '$stateProvider', '$urlRouterProvider','$locationProvider','$sceDelegateProvider',
+        function($stateProvider, $urlRouterProvider,$locationProvider,$sceDelegateProvider) {
             $urlRouterProvider.otherwise("/playlist");
 
             $stateProvider
@@ -21,21 +22,11 @@
                     enabled: true,
                     requireBase: false
                 });
+
+            $sceDelegateProvider.resourceUrlWhitelist([
+                'https://www.youtube.com/embed/**'
+            ]);
         }
     ]);
-    YTApp.directive('lastLineEllipsis',[function(){
-        return {
-            scope:{
-                content:'='
-            },
-            template:'{{content}}',
-            link:function(scope,el){
-                scope.$watch('content',function(){
-                    w.applyEllipsis(el[0]);
-                })
-            }
-        }
-    }])
-
 
 })(window,angular);

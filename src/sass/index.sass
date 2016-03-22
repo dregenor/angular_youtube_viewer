@@ -1,6 +1,21 @@
 @import ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap
 @import ./last-line-polyfill
 
+.loading
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    height: 3px
+    background-color: red
+
+.playlist
+  margin: 0 auto
+  width: 766px
+
 .playlist-item
   border: solid 1px lightgrey
   width: 766px
@@ -35,3 +50,43 @@
     right: 10px
     bottom: 18px
     width: 304px
+
+.item-full
+  width: 768px
+  margin: 0 auto
+
+  .title
+    display: block
+    font-size: 24px
+    font-weight: bold
+    margin: 20px
+
+
+  .date
+    display: block
+    font-size: 15px
+    font-weight: bold
+    color: gray
+    margin: 20px
+
+
+  .video-player
+    margin-right: 18px
+    float: left
+    width: 469px
+    height: 293px
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    iframe
+      height: 100%
+      width: 100%
+
+  .back
+    font-weight: 700
+    font-style: normal
+    font-size: 15px
+    color: #868686
+    margin: 20px
+
+  //.description

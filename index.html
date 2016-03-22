@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My YouTube playlist</title>
-    <!--polyfill-->
-    <script src="src/js/thirdparty/ellipsis-lastline.js"></script>
-    <!--libs-->
-    <script src="node_modules/angular/angular.js"></script>
-
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <!--main-->
-    <script src="src/js/main.js"></script>
-    <script src="src/js/playlist.js"></script>
-    <script src="src/js/playlist-item.js"></script>
-    <link rel="stylesheet" href="dist/css/index.css">
+    <!--bundle-->
+    <script src="/dist/js/app.js"></script>
+    <link rel="stylesheet" href="/dist/css/index.css">
 </head>
 <body ng-app="app">
     <div class="container">
-        <div ui-view></div>
+        <div ui-view class="main-content"></div>
     </div>
 </body>
 </html>
