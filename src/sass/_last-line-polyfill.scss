@@ -1,0 +1,59 @@
+
+div.el {
+  background-color: #fff;
+  display: block;
+  hyphens: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  vertical-align: top;
+  //width: 100%;
+  word-wrap: break-word; /* fallback for no hyphens support */
+}
+
+div.not-fits {
+  height: 6em;
+}
+
+div.fits {
+
+}
+
+div.has-link {
+  height: 7.5em;
+}
+
+/* make a visible hyphen, because the next trick also hides auto-generated hyphen */
+[data-hyphen]:before {
+  content: '-';
+  display: inline-block;
+  width: 0;
+}
+
+/* make the text invisible, but selectable and appear above ellipsis text */
+[data-overflow],
+[data-overflow] * {
+  color: transparent !important;
+}
+
+[data-overflow] {
+  position: relative;
+}
+
+/* the last visible row with ellipsis */
+[data-ellipsis] {
+  hyphens: none; /* must turn hyphens off! */
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  text-indent: 0; /* we do not want this to inherit */
+  text-overflow: ellipsis;
+  white-space: pre; /* should give the most reliable cross-browser behavior */
+  width: inherit;
+  word-wrap: normal; /* another rule we don't want to inherit */
+}
+
+/* this is the pseudo element that contains the ellipsis text */
+[data-ellipsis]:before {
+/*content: attr(data-ellipsis);*/
+}

@@ -1,0 +1,26 @@
+{
+  "name": "angular_youtube_viewer",
+  "version": "0.0.1",
+  "description": "example for interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dregenor/angular_youtube_viewer.git"
+  },
+  "author": "dregenor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dregenor/angular_youtube_viewer/issues"
+  },
+  "homepage": "https://github.com/dregenor/angular_youtube_viewer#readme",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
