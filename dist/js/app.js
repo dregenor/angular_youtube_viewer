@@ -35317,8 +35317,8 @@ require("./DAO/items-storage");
 
             $locationProvider
                 .html5Mode({
-                    enabled: true
-                });
+                    enabled: false
+                }).hashPrefix('!');
 
             $sceDelegateProvider.resourceUrlWhitelist([
                 'https://www.youtube.com/embed/**'

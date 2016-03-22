@@ -19,8 +19,8 @@
 
             $locationProvider
                 .html5Mode({
-                    enabled: true
-                });
+                    enabled: false
+                }).hashPrefix('!');
 
             $sceDelegateProvider.resourceUrlWhitelist([
                 'https://www.youtube.com/embed/**'
