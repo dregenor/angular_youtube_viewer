@@ -1,5 +1,4 @@
 (function(w,angular){
-    console.log('app');
     var YTApp = angular.module('app',['ui.router']);
 
     YTApp.config([
