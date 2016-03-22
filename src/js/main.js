@@ -12,15 +12,18 @@
                     url: "/playlist",
                     template: "<div playlist></div>"
                 })
-                .state('item', {
-                    url: "/item/{itemId:string}",
-                    template: "<div item-full></div>"
+                .state('media', {
+                    url: "/media/{itemId:string}",
+                    template: "<div item-full></div>",
+                    params:{
+                        itemId:null
+                    }
                 });
 
             $locationProvider
                 .html5Mode({
                     enabled: false
-                }).hashPrefix('!');
+                });
 
             $sceDelegateProvider.resourceUrlWhitelist([
                 'https://www.youtube.com/embed/**'

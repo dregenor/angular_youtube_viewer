@@ -35247,10 +35247,10 @@ require("./DAO/items-storage");
         return {
             template:
                 '<div class="playlist-item clearfix">' +
-                    '<a ng-href="item/{{item.id}}">' +
+                    '<a  ui-sref="media({ itemId: item.id })" >' +
                         '<div class="thumbnail" style="background-image: url({{getThumbnail()}})"></div>' +
                     '</a>' +
-                    '<a ng-href="item/{{item.id}}" class="title">{{item.snippet.title}}</a>'+
+                    '<a ui-sref="media({ itemId: item.id })" class="title">{{item.snippet.title}}</a>'+
                     '<span class="date">Published on {{item.snippet.publishedAt | date}}</span>'+
                     '<div class="el description" last-line-ellipsis content="item.snippet.description"></div>'+
                 '</div>',
@@ -35310,15 +35310,18 @@ require("./DAO/items-storage");
                     url: "/playlist",
                     template: "<div playlist></div>"
                 })
-                .state('item', {
-                    url: "/item/{itemId:string}",
-                    template: "<div item-full></div>"
+                .state('media', {
+                    url: "/media/{itemId:string}",
+                    template: "<div item-full></div>",
+                    params:{
+                        itemId:null
+                    }
                 });
 
             $locationProvider
                 .html5Mode({
                     enabled: false
-                }).hashPrefix('!');
+                });
 
             $sceDelegateProvider.resourceUrlWhitelist([
                 'https://www.youtube.com/embed/**'
